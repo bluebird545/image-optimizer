@@ -1,0 +1,13 @@
+@import 'tailwind';
+
+.range::-webkit-slider-thumb {
+  @apply appearance-none w-4 h-4 bg-blue-400 rounded-full shadow-[-405px_0_0_400px] shadow-blue-300;
+  // width: 15px;
+  // -webkit-appearance: none;
+  // appearance: none;
+  // height: 15px;
+  // cursor: ew-resize;
+  // background: #FFF;
+  // box-shadow: -405px 0 0 400px;
+  // border-radius: 50%;
+}

@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "noImplicitAny": true,
+    "esModuleInterop": true, // without
+    "target": "ES6",
+    "jsx": "react",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true, /* Need for imports in webpack config file */
+    "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"],
+      "@assets/*": ["./src/assets/*"],
+      "@components/*": ["./src/components/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@services/*": ["./src/services/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  // "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}

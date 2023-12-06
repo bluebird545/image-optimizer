@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer utilities {
+  .image-compare-container {
+    --position: 50%;
+
+    .clip-image-compare {
+      // clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+  
+      // clip-path: polygon(var(--exposure) 0, 100% 0, 100% 100%, var(--exposure) 100%);
+      clip-path: polygon(
+        var(--position) 0,
+        100% 0,
+        100% 100%,
+        var(--position) 100%
+      );
+    }
+  
+    .image-compare {
+  
+      &__slider {
+        --thumb-size: 15px;
+    
+        margin: 0 calc(var(--thumb-size) / -2);
+        width: calc(100% + var(--thumb-size));
+        // @apply appearance-none bg-none border-none;
+      }
+  
+      &__slider-button {
+        left: var(--position)
+      }
+      &__slider-line {
+        left: var(--position)
+      }
+    }
+  }
+}
