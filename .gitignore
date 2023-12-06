@@ -1,0 +1,8 @@
+./DS_STORE
+./api/node_modules
+./api/optimized_images
+./api/test_images
+./api/test-uploads/
+./api/uploaded_images
+
+./ui/node_modules
