@@ -6,7 +6,6 @@ const ImageCompare: React.FC = () => {
   const containerRef = useRef(null)
 
   const sliding = (event: React.ChangeEvent<HTMLInputElement>) => {
-    console.log('sliding...')
     // const clippedImage = editedImage.current
     const value = `${event.target.value}%`
     // clippedImage.style.setProperty('--exposure', value)

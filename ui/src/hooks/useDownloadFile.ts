@@ -29,11 +29,6 @@ export const useDownloadFile = ({ recordKey, onError, preDownloading, postDownlo
       // create url form blob
       const url = URL.createObjectURL(new Blob([data], { type:'application/zip' }))
 
-      // using useState is too slow
-      // href & download of anchorRef is not updated in time for click()
-      // setFileUrl(url)
-      // setFileName('file.zip')
-
       // set anchorRef hrefl download and trigger click
       anchorRef.current.href = url
       anchorRef.current.download = 'file.zip'
@@ -41,13 +36,6 @@ export const useDownloadFile = ({ recordKey, onError, preDownloading, postDownlo
 
       postDownloading()
       URL.revokeObjectURL(url)
-
-      // const link = document.createElement('a');
-      // link.href = url;
-      // link.setAttribute('download', 'file.zip');
-      // document.body.appendChild(link);
-      // link.click();
-      // link.parentNode.removeChild(link);
     } catch (error) {
       onError(error)
     }
@@ -55,6 +43,3 @@ export const useDownloadFile = ({ recordKey, onError, preDownloading, postDownlo
 
   return { download, anchorRef, fileUrl, fileName }
 }
-
-// resource:
-// https://levelup.gitconnected.com/react-custom-hook-typescript-to-download-a-file-through-api-b766046db18a

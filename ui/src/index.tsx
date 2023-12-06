@@ -1,6 +1,5 @@
-import React, { StrictMode } from 'react';
+import React from 'react';
 import { createRoot } from 'react-dom/client';
-// import Header from '@components/Header'
 import Uploader from '@components/Uploader'
 import Alert from '@components/Alert';
 

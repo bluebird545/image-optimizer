@@ -30,9 +30,6 @@ export interface AlertContextType {
   onClear: VoidFunction
 }
 
-// tying children
-// https://blog.logrocket.com/react-children-prop-typescript/
-// https://stackoverflow.com/questions/59106742/typescript-error-property-children-does-not-exist-on-type-reactnode
 export interface ComponentProps {
   children: string | JSX.Element | JSX.Element[] | (() => JSX.Element)
 }

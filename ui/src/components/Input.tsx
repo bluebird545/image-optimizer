@@ -2,15 +2,11 @@ import React, { useContext, useRef, useEffect } from 'react';
 import { AlertContext } from '../context/alert';
 
 type InputProps = {
-  onFileSelect: Function
   onDrop: Function
 }
 
-const Input: React.FC <InputProps> = ({ onFileSelect, onDrop }) => {
-  // const imageTypeRegex = /image\/(png|jpg|jpeg)/gm;
-  // const acceptableFormats = 'image/png, image/jpeg, image/webp';
+const Input: React.FC <InputProps> = ({ onDrop }) => {
   const acceptableFormats = ['image/png', 'image/jpg', 'image/jpeg', 'image/webp'];
-  console.log(acceptableFormats.join(', '))
 
   const alertCtx = useContext(AlertContext);
 
@@ -22,13 +18,6 @@ const Input: React.FC <InputProps> = ({ onFileSelect, onDrop }) => {
     drop.current.addEventListener('dragenter', handleDragOver)
     drop.current.addEventListener('dragleave', handleDragOver)
     drop.current.addEventListener('drop', handleDrop)
-    
-    // return () => {
-    //   drop.current.removeEventListener('dragover', handleDragOver)
-    //   drop.current.removeEventListener('dragenter', handleDragOver)
-    //   drop.current.removeEventListener('dragleave', handleDragOver)
-    //   drop.current.removeEventListener('drop', handleDrop)
-    // }
   }, [])
 
   const handleFiles = (fileList: FileList) => {
@@ -45,7 +34,6 @@ const Input: React.FC <InputProps> = ({ onFileSelect, onDrop }) => {
       return;
     }
 
-    console.log('all good!')
     onDrop(files)
   }
 

@@ -13,7 +13,6 @@ export const optimizeImages = async(files: any, quality: string, width: string, 
   const formData = new FormData();
 
   for (let i = 0; i < files.length; i++) {
-    console.log(files[i].name);
     formData.append('files', files[i].originalFile);
   }
 
