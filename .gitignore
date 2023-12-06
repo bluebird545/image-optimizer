@@ -1,4 +1,6 @@
-./DS_STORE
+**/.DS_STORE
+**/node_modules
+
 ./api/DS_STORE
 ./api/node_modules
 ./api/optimized_images
@@ -6,5 +8,4 @@
 ./api/test-uploads/
 ./api/uploaded_images
 
-./ui/DS_STORE
 ./ui/node_modules
