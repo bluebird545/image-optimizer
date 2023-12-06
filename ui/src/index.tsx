@@ -5,7 +5,7 @@ import Alert from '@components/Alert';
 
 import AlertProvider from './context/alert';
 
-import '@assets/scss/main.scss'
+import '@assets/styles/main.scss'
 
 const App: React.FC = () => (
   <AlertProvider>
