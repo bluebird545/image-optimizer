@@ -1,24 +1,8 @@
 import path from 'path'
 import fs from 'fs'
-import { fileURLToPath } from 'url';
 import archiver from 'archiver';
 
-// const __filename = fileURLToPath(import.meta.url);
-// const __dirname = path.dirname(__filename);
-// const workingDirectory = __dirname;
-
-// // const imagePath = path.join('public', imagePaths.src);
-// // const outputPath = path.join('public', imagePaths.dest);
-// const outputPath = 'uploads'
-// const downloadPath = 'download'
-// const imageDirectory = path.join(workingDirectory, outputPath);
-
 export default async(res, recordKey) => {
-  console.log(`Getting files from ${recordKey}`)
-  // const destinationPath = path.join(workingDirectory, outputPath, destinationFolder)
-  // const filePath = fs.createReadStream(destinationPath)
-  // console.log(`filePath: `, filePath)
-
   const directoryPath = path.join('./uploads', recordKey)
 
   // start of using archiver

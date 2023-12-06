@@ -43,13 +43,11 @@ app.get('/ready', (req, res) => {
 
 // optimize images with no resizing
 app.post('/optimize', upload.array('files'), async(req, res) => {
-  console.log('----> OPTIMIZING IMAGES <----')
   const recordKey = await optimize(req.files, req.query);
   return res.status(200).json({ recordKey });
 })
 
 app.get('/download', async(req, res) => {
-  console.log('----> DOWNLOAD IMAGES <----')
   const { recordKey } = req.query;
   // if (!key) return res.status(500).json('Please specify key')
 
